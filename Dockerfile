@@ -2,6 +2,8 @@ FROM centos/python-35-centos7:latest
 
 USER root
 
+LABEL author="rm343718@fiap.com"
+
 COPY . /tmp/src
 
 RUN mv /tmp/src/.s2i/bin /tmp/scripts
