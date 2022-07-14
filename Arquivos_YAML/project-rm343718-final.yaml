@@ -1,0 +1,54 @@
+﻿kind: Project
+apiVersion: project.openshift.io/v1
+metadata:
+  name: rm343718-final
+  selfLink: /apis/project.openshift.io/v1/projects/rm343718-final
+  uid: 4ca6cc0e-9fb5-4094-b85c-b316f24f1822
+  resourceVersion: '97134698'
+  creationTimestamp: '2022-07-14T00:35:21Z'
+  annotations:
+    openshift.io/description: Solution Sprint Project
+    openshift.io/display-name: RodrigoMartins
+    openshift.io/requester: lvdwul
+    openshift.io/sa.scc.mcs: 's0:c50,c25'
+    openshift.io/sa.scc.supplemental-groups: 1002500000/10000
+    openshift.io/sa.scc.uid-range: 1002500000/10000
+  managedFields:
+    - manager: cluster-policy-controller
+      operation: Update
+      apiVersion: v1
+      time: '2022-07-14T00:35:21Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            'f:openshift.io/sa.scc.mcs': {}
+            'f:openshift.io/sa.scc.supplemental-groups': {}
+            'f:openshift.io/sa.scc.uid-range': {}
+    - manager: openshift-apiserver
+      operation: Update
+      apiVersion: v1
+      time: '2022-07-14T00:35:21Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:openshift.io/description': {}
+            'f:openshift.io/display-name': {}
+            'f:openshift.io/requester': {}
+        'f:status':
+          'f:phase': {}
+    - manager: openshift-controller-manager
+      operation: Update
+      apiVersion: v1
+      time: '2022-07-14T00:35:21Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:spec':
+          'f:finalizers': {}
+spec:
+  finalizers:
+    - kubernetes
+status:
+  phase: Active

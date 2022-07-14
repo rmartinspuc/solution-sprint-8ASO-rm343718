@@ -1,0 +1,365 @@
+﻿kind: Pod
+apiVersion: v1
+metadata:
+  generateName: sample-database-1-
+  annotations:
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "",
+          "interface": "eth0",
+          "ips": [
+              "10.129.20.67"
+          ],
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "",
+          "interface": "eth0",
+          "ips": [
+              "10.129.20.67"
+          ],
+          "default": true,
+          "dns": {}
+      }]
+    kubernetes.io/limit-ranger: >-
+      LimitRanger plugin set: cpu request for container postgresql; cpu limit
+      for container postgresql
+    openshift.io/deployment-config.latest-version: '1'
+    openshift.io/deployment-config.name: sample-database
+    openshift.io/deployment.name: sample-database-1
+    openshift.io/generated-by: OpenShiftNewApp
+    openshift.io/scc: restricted
+  selfLink: /api/v1/namespaces/rm343718-final/pods/sample-database-1-f5ktw
+  resourceVersion: '97266536'
+  name: sample-database-1-f5ktw
+  uid: 64468a7e-b141-465b-9eb4-ea4824ce61f0
+  creationTimestamp: '2022-07-14T03:12:17Z'
+  managedFields:
+    - manager: kube-controller-manager
+      operation: Update
+      apiVersion: v1
+      time: '2022-07-14T03:12:17Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:openshift.io/deployment-config.latest-version': {}
+            'f:openshift.io/deployment-config.name': {}
+            'f:openshift.io/deployment.name': {}
+            'f:openshift.io/generated-by': {}
+          'f:generateName': {}
+          'f:labels':
+            .: {}
+            'f:deployment': {}
+            'f:deploymentconfig': {}
+            'f:name': {}
+          'f:ownerReferences':
+            .: {}
+            'k:{"uid":"e49f8f31-cd4f-4bda-b099-2c0b9cfb0b4b"}':
+              .: {}
+              'f:apiVersion': {}
+              'f:blockOwnerDeletion': {}
+              'f:controller': {}
+              'f:kind': {}
+              'f:name': {}
+              'f:uid': {}
+        'f:spec':
+          'f:containers':
+            'k:{"name":"postgresql"}':
+              'f:image': {}
+              'f:volumeMounts':
+                .: {}
+                'k:{"mountPath":"/var/lib/pgsql/data"}':
+                  .: {}
+                  'f:mountPath': {}
+                  'f:name': {}
+              'f:terminationMessagePolicy': {}
+              .: {}
+              'f:resources':
+                .: {}
+                'f:limits':
+                  .: {}
+                  'f:memory': {}
+                'f:requests':
+                  .: {}
+                  'f:memory': {}
+              'f:livenessProbe':
+                .: {}
+                'f:exec':
+                  .: {}
+                  'f:command': {}
+                'f:failureThreshold': {}
+                'f:initialDelaySeconds': {}
+                'f:periodSeconds': {}
+                'f:successThreshold': {}
+                'f:timeoutSeconds': {}
+              'f:env':
+                .: {}
+                'k:{"name":"POSTGRESQL_DATABASE"}':
+                  .: {}
+                  'f:name': {}
+                  'f:valueFrom':
+                    .: {}
+                    'f:secretKeyRef':
+                      .: {}
+                      'f:key': {}
+                      'f:name': {}
+                'k:{"name":"POSTGRESQL_PASSWORD"}':
+                  .: {}
+                  'f:name': {}
+                  'f:valueFrom':
+                    .: {}
+                    'f:secretKeyRef':
+                      .: {}
+                      'f:key': {}
+                      'f:name': {}
+                'k:{"name":"POSTGRESQL_USER"}':
+                  .: {}
+                  'f:name': {}
+                  'f:valueFrom':
+                    .: {}
+                    'f:secretKeyRef':
+                      .: {}
+                      'f:key': {}
+                      'f:name': {}
+              'f:readinessProbe':
+                .: {}
+                'f:exec':
+                  .: {}
+                  'f:command': {}
+                'f:failureThreshold': {}
+                'f:initialDelaySeconds': {}
+                'f:periodSeconds': {}
+                'f:successThreshold': {}
+                'f:timeoutSeconds': {}
+              'f:securityContext':
+                .: {}
+                'f:capabilities': {}
+                'f:privileged': {}
+              'f:terminationMessagePath': {}
+              'f:imagePullPolicy': {}
+              'f:ports':
+                .: {}
+                'k:{"containerPort":5432,"protocol":"TCP"}':
+                  .: {}
+                  'f:containerPort': {}
+                  'f:protocol': {}
+              'f:name': {}
+          'f:dnsPolicy': {}
+          'f:enableServiceLinks': {}
+          'f:restartPolicy': {}
+          'f:schedulerName': {}
+          'f:securityContext': {}
+          'f:terminationGracePeriodSeconds': {}
+          'f:volumes':
+            .: {}
+            'k:{"name":"sample-database-data"}':
+              .: {}
+              'f:name': {}
+              'f:persistentVolumeClaim':
+                .: {}
+                'f:claimName': {}
+    - manager: multus
+      operation: Update
+      apiVersion: v1
+      time: '2022-07-14T03:12:31Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            'f:k8s.v1.cni.cncf.io/network-status': {}
+            'f:k8s.v1.cni.cncf.io/networks-status': {}
+    - manager: kubelet
+      operation: Update
+      apiVersion: v1
+      time: '2022-07-14T03:12:40Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          'f:conditions':
+            'k:{"type":"ContainersReady"}':
+              .: {}
+              'f:lastProbeTime': {}
+              'f:lastTransitionTime': {}
+              'f:status': {}
+              'f:type': {}
+            'k:{"type":"Initialized"}':
+              .: {}
+              'f:lastProbeTime': {}
+              'f:lastTransitionTime': {}
+              'f:status': {}
+              'f:type': {}
+            'k:{"type":"Ready"}':
+              .: {}
+              'f:lastProbeTime': {}
+              'f:lastTransitionTime': {}
+              'f:status': {}
+              'f:type': {}
+          'f:containerStatuses': {}
+          'f:hostIP': {}
+          'f:phase': {}
+          'f:podIP': {}
+          'f:podIPs':
+            .: {}
+            'k:{"ip":"10.129.20.67"}':
+              .: {}
+              'f:ip': {}
+          'f:startTime': {}
+  namespace: rm343718-final
+  ownerReferences:
+    - apiVersion: v1
+      kind: ReplicationController
+      name: sample-database-1
+      uid: e49f8f31-cd4f-4bda-b099-2c0b9cfb0b4b
+      controller: true
+      blockOwnerDeletion: true
+  labels:
+    deployment: sample-database-1
+    deploymentconfig: sample-database
+    name: sample-database
+spec:
+  restartPolicy: Always
+  serviceAccountName: default
+  imagePullSecrets:
+    - name: default-dockercfg-2szp2
+  priority: 0
+  schedulerName: default-scheduler
+  enableServiceLinks: true
+  terminationGracePeriodSeconds: 30
+  preemptionPolicy: PreemptLowerPriority
+  nodeName: ip-10-0-163-186.us-east-2.compute.internal
+  securityContext:
+    seLinuxOptions:
+      level: 's0:c50,c25'
+    fsGroup: 1002500000
+  containers:
+    - resources:
+        limits:
+          cpu: 1500m
+          memory: 512Mi
+        requests:
+          cpu: 5m
+          memory: 512Mi
+      readinessProbe:
+        exec:
+          command:
+            - /usr/libexec/check-container
+        initialDelaySeconds: 5
+        timeoutSeconds: 1
+        periodSeconds: 10
+        successThreshold: 1
+        failureThreshold: 3
+      terminationMessagePath: /dev/termination-log
+      name: postgresql
+      livenessProbe:
+        exec:
+          command:
+            - /usr/libexec/check-container
+            - '--live'
+        initialDelaySeconds: 120
+        timeoutSeconds: 10
+        periodSeconds: 10
+        successThreshold: 1
+        failureThreshold: 3
+      env:
+        - name: POSTGRESQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: sample-database
+              key: database-user
+        - name: POSTGRESQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: sample-database
+              key: database-password
+        - name: POSTGRESQL_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: sample-database
+              key: database-name
+      securityContext:
+        capabilities:
+          drop:
+            - KILL
+            - MKNOD
+            - SETGID
+            - SETUID
+        privileged: false
+        runAsUser: 1002500000
+      ports:
+        - containerPort: 5432
+          protocol: TCP
+      imagePullPolicy: IfNotPresent
+      volumeMounts:
+        - name: sample-database-data
+          mountPath: /var/lib/pgsql/data
+        - name: default-token-dxjn4
+          readOnly: true
+          mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      terminationMessagePolicy: File
+      image: >-
+        image-registry.openshift-image-registry.svc:5000/openshift/postgresql@sha256:0f55b6e734b6d1326593ab7ca16d96a498ac8fd7450e30a7560da09ff08dd7f5
+  serviceAccount: default
+  volumes:
+    - name: sample-database-data
+      persistentVolumeClaim:
+        claimName: sample-database
+    - name: default-token-dxjn4
+      secret:
+        secretName: default-token-dxjn4
+        defaultMode: 420
+  dnsPolicy: ClusterFirst
+  tolerations:
+    - key: node.kubernetes.io/not-ready
+      operator: Exists
+      effect: NoExecute
+      tolerationSeconds: 300
+    - key: node.kubernetes.io/unreachable
+      operator: Exists
+      effect: NoExecute
+      tolerationSeconds: 300
+    - key: node.kubernetes.io/memory-pressure
+      operator: Exists
+      effect: NoSchedule
+status:
+  phase: Running
+  conditions:
+    - type: Initialized
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2022-07-14T03:12:23Z'
+    - type: Ready
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2022-07-14T03:12:40Z'
+    - type: ContainersReady
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2022-07-14T03:12:40Z'
+    - type: PodScheduled
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2022-07-14T03:12:23Z'
+  hostIP: 10.0.163.186
+  podIP: 10.129.20.67
+  podIPs:
+    - ip: 10.129.20.67
+  startTime: '2022-07-14T03:12:23Z'
+  containerStatuses:
+    - restartCount: 0
+      started: true
+      ready: true
+      name: postgresql
+      state:
+        running:
+          startedAt: '2022-07-14T03:12:31Z'
+      imageID: >-
+        image-registry.openshift-image-registry.svc:5000/openshift/postgresql@sha256:0f55b6e734b6d1326593ab7ca16d96a498ac8fd7450e30a7560da09ff08dd7f5
+      image: >-
+        image-registry.openshift-image-registry.svc:5000/openshift/postgresql@sha256:0f55b6e734b6d1326593ab7ca16d96a498ac8fd7450e30a7560da09ff08dd7f5
+      lastState: {}
+      containerID: 'cri-o://a45d7104097f37dcf3afbd2ead9dd329b975a29a061417273e95da7f040b1e15'
+  qosClass: Burstable
